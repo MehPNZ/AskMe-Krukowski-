@@ -1,0 +1,27 @@
+<% provide :page_title, t("menu.quest")%>
+ <% currently_at t("menu.quest_s") %>
+<article class="mb-3">
+  <%= render @question%>
+</article>
+
+<%= render 'comments/commentable', commentable: @question, comment: @comment %>
+  
+<hr class="my-3">
+
+<% if policy(:answer).new? %>
+<h2><%= t('.answer_w')%></h2>
+
+<%= render 'answers/form'%>
+
+<h2 class="mt-5"><%= t('.answer')%></h2>
+<% end %>
+
+<%= pagination @pagy %> 
+
+<%= turbo_frame_tag 'answers' do %>
+  <%= render partial: 'answers/answer', collection: @answers,
+   as: :answer, locals: {question: @question} %>
+<% end %>
+
+<%= pagination @pagy %>
+

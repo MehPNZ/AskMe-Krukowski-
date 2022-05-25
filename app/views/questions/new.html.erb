@@ -1,0 +1,7 @@
+<% provide :page_title, t('questions.index.new_question')%>
+ <% currently_at t("menu.quest_s") %>
+
+<h1 class="mb-4"><%= t('questions.index.new_question')%></h1>
+
+<%= render partial: 'form', locals: {question: @question, tags: @tags}%>
+

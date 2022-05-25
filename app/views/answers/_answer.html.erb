@@ -1,0 +1,34 @@
+<%= turbo_frame_tag answer do %>
+  <%= tag.article class: 'mb-3 card' do %>
+    <div class="row g-0">
+      <div class="col-sm-auto text-sm-center align-self-center">
+        <%= answer.user.gravatar size: 50, css_class: 'd-block' %>
+        <%= answer.user.name_or_email%>
+      </div>
+      <div class="col-sm">
+        <div class="card-body">
+          <section class="card-text">
+            <small><time datetime="<%= answer.formatted_created_at %>">
+              <%= answer.formatted_created_at %>
+            </time></small>
+
+            <div class="mt-2 mb-3">
+              <%= sanitize answer.body%>
+            </div>
+          </section>
+
+            <% if policy(answer).edit? %>
+              <%= link_to t("global.edit"), edit_question_answer_path(question, answer), 
+                class: 'btn btn-secondary btn-sm'%> 
+            <% end %>
+
+            <% if policy(answer).destroy? %>
+              <%= link_to t("global.delete"), question_answer_path(question, answer), 
+                class: 'btn btn-danger btn-sm', data: {turbo_method: :delete, turbo_confirm: 'Are your sure?'}%>
+            <% end %>
+        </div>
+      </div>
+    <%end%>
+
+    <%= render 'comments/commentable', commentable: answer, comment: @comment %>
+<% end %>

@@ -1,0 +1,6 @@
+<% provide :page_title, t('.edit_q')%>
+<% currently_at t("menu.quest_s")%>
+
+<h1 class="mb-4"><%= t('.edit_q')%></h1>
+
+<%= render partial: 'form', locals: {question: @question, tags: @tags}%>

@@ -1,0 +1,134 @@
+en:
+  en: English
+  ru: Russian
+  activerecord:
+    attributes:
+      comment:
+        body: "Текст"
+      question:
+        title: "Title"
+        body: "Body"
+      answer:
+        body: "Body"
+      user:
+        email: "Email"
+        name: "Name"
+  password_reset_mailer:
+    reset_email:
+      subject: 'Password reset | AskIt'
+
+  password_resets:
+    fail: Could not reset your password...
+    edit:
+      title: Enter new password!
+      form:
+        submit: Reset my password!
+    update:
+      succes: Your password was reset!
+    create:
+      success: "Password reset instruction were sent to  your email adress."
+    new:
+      title: "Reset Password"
+
+  pages:
+    index:
+      title: "Welcome to "
+      
+  admin:
+    users:
+      edit:
+        title: "Edit user"
+    user_mailer:
+      bulk_import_done:
+        subject: User import done | AskIt
+      bulk_import_fail:
+        subject: User import failed | AskIt
+      bulk_export_done:
+        subject: User export done | AskIt
+
+  menu:
+    home: "Home"
+    quest_s: "Questions"
+    quest: "Question"
+    profile: "Edit profile"
+    sign_up: "Sign Up"
+    sign_in: "Log In"
+    log_out: "Log Out"
+    users: "Users"
+  
+  flash:
+    answer_create: "Answer created!"
+    answer_update: "Answer updated!"
+    answer_delete: "Answer deleted!"
+    q_create: "Question created!"
+    q_update: "Question updated!"
+    q_delete: "Question deleted!"
+    session_welcome: "Welcome"
+    session_alert: "Incorrect email and/or password"
+    session_close: "See you later!"
+    profile_update: "Your profile was successfully updated!"
+    comment_create: "Comment created!"
+    comment_delete: "Comment deleted!"
+    require_yes: "You are not signed in!"
+    require_no: "You are already signed in!"
+    user_succes: "User updated!"
+    user_delete: "User deleted!"
+
+  global:
+    email_enter: "Enter mail"
+    password: "Password"
+    password_enter: "Enter password"
+    name_entry: "Entry name"
+    submit: "Submit"
+    delete: "Delete"
+    edit: "Edit"
+    not_authorized: "You are not authorized to perfom this action!"
+    back: "Back"
+
+  questions:
+    index:
+      new_question: "New question"
+      continued: "continued"
+      show: "Show"
+      search_by_tags: "Search by tags"
+    form:
+      title: "Title"
+      body: "Body"
+      cancel: "Cancel"
+    edit:
+      edit_q: "Edit question"
+    show:
+      back: "Back"
+      answer_w: "Write your answer"
+      answer: "Answer"
+      comments: Comments
+ 
+  answers:
+    edit:
+      edit: "Edit your answer to a question"
+      edit_head: "Edit answer"
+ 
+  sessions:
+    new:
+      remember_me: "Remember me"
+      email: "E-mail"
+      forgot_password: "I forgot my password!"
+  
+  users:
+    new:
+      registration: "Registration"
+    edit:  
+      edit: "Edit profile"
+    form:   
+      password_confirmation: "Password confirmation"
+      register: "Register!"
+      save: "Save"
+      old_password: "Old password"
+      old_password_entry: "Enter old password"
+       
+
+
+
+  
+
+  

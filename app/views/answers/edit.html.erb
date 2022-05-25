@@ -1,0 +1,6 @@
+<% provide :page_title, t('.edit_head')%>
+ <% currently_at t("menu.quest_s") %>
+
+<h1 class="mb-4"><%= t(".edit")%> "<%= @question.title%>"</h1>
+
+<%= render 'form'%>

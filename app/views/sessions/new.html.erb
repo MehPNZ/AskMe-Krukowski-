@@ -1,0 +1,42 @@
+<% provide :page_title, t('menu.sign_in') %>
+ <% currently_at t('menu.sign_in') %>
+
+<h1 class="mb-4"><%= t('.sign_in')%></h1>
+
+<%= form_with url: session_path do |f| %>
+  <div class="mb-3 row">
+      <div class='col-sm-1 col-form-label text-end'>
+        <%= f.label :email, t('.email')%>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.email_field :email, value: params[:email], placeholder: t('global.email_enter'), 
+          class: 'form-control form-control-lg'%>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class='col-sm-1 col-form-label text-end'>
+        <%= f.label :password, t('global.password')%>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.password_field :password, placeholder: t('global.password_enter'), class: 'form-control form-control-lg'%>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="offset-sm-1 col-sm-10">
+        <div class="form-check">
+          <%= f.check_box :remember_me, class: 'form-check-input', value: '1' %>
+          <%= f.label :remember_me, t('.remember_me'), class: 'form-check-label' %>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit t('menu.sign_in'), class: 'btn btn-primary btn-lg' %>
+     <%= link_to t('.form.forgot_password'), new_password_reset_path,
+    class: 'btn btn-secondary' %>
+
+    
+<% end %>

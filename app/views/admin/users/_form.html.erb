@@ -1,0 +1,57 @@
+<%= render 'shared/errors', object: user%>
+
+<%= form_with model: [:admin, user] do |f| %>
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :email%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.email_field :email, placeholder: t('global.email_enter'), class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :name%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :name, placeholder: t('global.name_entry'), class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+
+<div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :role%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.select :role,user_roles, {}, class: 'form-select form-select-lg' %>
+    </div>
+</div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :password, t('global.password')%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password, class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :password_confirmation, t('.password_confirmation')%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <%= f.submit (user.new_record? ? t('.register') : t('.save')), 
+    class: 'btn btn-primary btn-lg' %>
+  <%end%>

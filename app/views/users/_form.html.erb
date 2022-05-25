@@ -1,0 +1,68 @@
+<%= render 'shared/errors', object: user%>
+
+<%= form_with model: user do |f| %>
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :email%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.email_field :email, placeholder: t('global.email_enter'), class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :name%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :name, placeholder: t('global.name_entry'), class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :password, t('global.password')%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password, class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :password_confirmation, t('.password_confirmation')%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg'%>
+    </div>
+  </div>
+
+  <% unless @user.new_record? %>
+    <div class="mb-3 row">
+      <div class='col-sm-1 col-form-label text-end'>
+        <%= f.label :old_password, t('.old_password')%>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.password_field :old_password, placeholder: t('.old_password_entry'), class: 'form-control form-control-lg'%>
+      </div>
+    </div>
+  <% end %>
+
+   <div class="mb-3 row">
+    <div class='col-sm-1 col-form-label text-end'>
+      <%= f.label :role%>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :role, class: 'form-control-plaintext form-control-lg', readonly: true%>
+    </div>
+
+
+  <%= f.submit (@user.new_record? ? t('.register') : t('.save')), 
+    class: 'btn btn-primary btn-lg' %>
+  <%end%>

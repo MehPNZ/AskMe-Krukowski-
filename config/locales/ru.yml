@@ -1,0 +1,126 @@
+ru:
+  en: Английский
+  ru: Русский
+  activerecord:
+    attributes:
+      comment:
+        body: "Текст"
+      question:
+        title: "Заголовок"
+        body: "Текст"
+      answer:
+        body: "Текст"
+      user:
+        email: "Почта"
+        name: "Имя"
+  password_reset_mailer:
+    reset_email:
+      subject: 'Сброс пароля | AskIt'
+
+  password_resets:
+    fail: Не удалось сбросить ваш пароль
+    edit:
+      title: Введите новый пароль
+      form:
+        submit: Cбросить пароль!
+    update:
+      succes: Ваш пароль сброшен!
+    create:
+      success: "Инструкция по сбросу пароля отправлена на почту."
+    new:
+      title: "Сброс пароля"
+        
+  pages:
+    index:
+      title: "Добро пожаловать в"
+
+  admin:
+    users:
+      edit:
+        title: "Редактирование пользователя"
+  admin:
+    user_mailer:
+      bulk_import_done:
+        subject: Импорт пользователей завершён | AskIt
+      bulk_import_fail:
+        subject: Импорт пользователей не удался | AskIt
+      bulk_export_done:
+        subject: Экспорт пользователей завершён | AskIt
+
+  menu:
+    home: "Главная"
+    quest: "Вопрос"
+    quest_s: "Вопросы"
+    profile: "Редактировать"
+    sign_up: "Регистрация"
+    sign_in: "Войти"
+    log_out: "Выйти"
+    users: "Пользователи"
+  
+  flash:
+    answer_create: "Ответ создан!"
+    answer_update: "Ответ отредактирован!"
+    answer_delete: "Ответ удален!"
+    q_create: "Вопрос создан!"
+    q_update: "Вопрос отредактирован!"
+    q_delete: "Вопрос удален!"
+    session_welcome: "Добро пожаловать"
+    session_alert: "Неправильная электронная почта и/или пароль"
+    session_close: "До скорой встречи!"
+    profile_update: "Ваш аккаунт был успешно обновлен!"
+    comment_create: "Комментарий создан"
+    comment_delete: "Комментарий удален!"
+    require_yes: "Вы не вошли в систему!"
+    require_no: "Вы уже зарегистрированы!"
+    user_succes: "Пользователь обовлен!"
+    user_delete: "Пользователь удален!"
+
+  global:
+    email_enter: "Введите почту"
+    password: "Пароль"
+    password_enter: "Введите пароль"
+    name_entry: "Введите имя"
+    submit: "Отправить"
+    delete: "Удалить"
+    edit: "Редактировать"
+    not_authorized: "У вас нет прав на выполнение этого дейст"
+    back: "Назад"
+  
+  questions:
+    index:
+      new_question: "Новый вопрос"
+      continued: "продолжение"
+      show: "Открыть"
+      search_by_tags: "Поиск по тегам"
+    form:
+      title: "Заголовок"
+      body: "Текст"
+      cancel: "Отмена"
+    edit:
+      edit_q: "Редактировать вопрос"
+    show:
+      back: "Назад"
+      answer_w: "Напишите свой ответ"
+      answer: "Ответ"
+      comments: Комментарии
+  answers:
+    edit:
+      edit: "Редактировать ответ на вопрос"
+      edit_head: "Редактировать ответ"
+  sessions:
+    new:
+      sign_in: "Войти в аккаунт"
+      remember_me: "Запомнить"
+      email: "Почта"
+      forgot_password: "Я забыл пароль"
+  users:
+    new:
+      registration: "Создание аккаунта"
+    edit:
+      edit: "Редактирование аккаунта"
+    form:  
+      password_confirmation: "Подтвердите пароль"
+      register: "Создать!"
+      save: "Сохранить"
+      old_password: "Старый пароль"
+      old_password_entry: "Введите старый пароль"
